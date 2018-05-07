@@ -1,0 +1,42 @@
+server:
+  port: 8888
+  context-path: / # 项目启动地址为 localhost:8888/
+
+spring:
+  datasource:
+    url: jdbc:mysql://xxx:3306/test_case?useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: xxxx
+    password: xxxx
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    database: MYSQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+  aop:
+    proxy-target-class: true
+
+  thymeleaf:
+    cache: false
+    encoding: UTF-8
+    mode: LEGACYHTML5
+
+#  mvc:
+#    view: # 默认前后缀
+#      prefix: /
+#      suffix: .html
+#    static-path-pattern: /**
+#logging: #相对位置，根目录
+#  path: var/log
+# 日志级别 TRACE < DEBUG < INFO < WARN < ERROR < FATAL
+#logging: # 配置日志文件的配置方式  logback-spring.* 也为spring的默认命名规则
+#  config: logback-spring.xml
+
+
+
+
